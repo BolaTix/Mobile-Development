@@ -1,0 +1,40 @@
+package com.example.bolatix.ui.activites
+
+import android.os.Bundle
+import android.widget.Button
+import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import com.example.bolatix.R
+import com.example.bolatix.databinding.ActivityLoginBinding
+import com.example.bolatix.preference.OnBoardingPreference
+
+class LoginActivity : AppCompatActivity() {
+    private lateinit var onBoardingStatus: OnBoardingPreference
+    private lateinit var binding: ActivityLoginBinding
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        onBoardingStatus = OnBoardingPreference(this)
+
+        binding.btnGoogle.setOnClickListener {
+            Toast.makeText(this, "This feature is not available yet!", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.btnFacebok.setOnClickListener {
+            Toast.makeText(this, "Fitur ini belum tersedia!", Toast.LENGTH_SHORT).show()
+        }
+
+
+//        val btnLogin = findViewById<Button>(R.id.btnLogin)
+//        btnLogin.setOnClickListener {
+//            val getOnboardingStatus = onBoardingStatus.isOnboardingCompleted()
+//            onBoardingStatus.setOnboardingCompleted(false)
+//            Toast.makeText(this, getOnboardingStatus.toString(), Toast.LENGTH_SHORT).show()
+//        }
+    }
+}

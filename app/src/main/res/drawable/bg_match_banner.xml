@@ -1,0 +1,10 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <inset
+            android:drawable="@drawable/bg_3"
+            android:insetTop="16dp"
+            android:insetBottom="16dp"
+            android:insetLeft="16dp"
+            android:insetRight="16dp" />
+    </item>
+</layer-list>

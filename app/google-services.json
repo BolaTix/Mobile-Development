@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "552077162382",
+    "firebase_url": "https://bolatix-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "bolatix",
+    "storage_bucket": "bolatix.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:552077162382:android:163c825a850f680bf716df",
+        "android_client_info": {
+          "package_name": "com.example.bolatix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "552077162382-55vcarvvfp6nvokg83tpeocd2sa6plqi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARRGiqtu8fatfg7-E1Lxn0h0RC38xtJ50"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "552077162382-55vcarvvfp6nvokg83tpeocd2sa6plqi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

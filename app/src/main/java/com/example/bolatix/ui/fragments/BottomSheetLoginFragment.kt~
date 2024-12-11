@@ -1,0 +1,165 @@
+package com.example.bolatix.ui.fragments
+
+import android.app.Dialog
+import android.content.Intent
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.activity.viewModels
+import androidx.fragment.app.viewModels
+import com.example.bolatix.R
+import com.example.bolatix.data.remote.request.LoginRequest
+import com.example.bolatix.databinding.FragmentBottomSheetLoginBinding
+import com.example.bolatix.ui.activities.FavoriteActivity
+import com.example.bolatix.ui.activities.ForgotPasswordActivity
+import com.example.bolatix.ui.activities.SignUpActivity
+import com.example.bolatix.utils.doOnTextChanged
+import com.example.bolatix.utils.emailPattern
+import com.example.bolatix.utils.passwordPattern
+import com.github.razir.progressbutton.bindProgressButton
+import com.github.razir.progressbutton.hideProgress
+import com.github.razir.progressbutton.showProgress
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
+
+
+class BottomSheetLoginFragment : BottomSheetDialogFragment() {
+
+//    private val viewModel by viewModels<SignInViewModel> {
+//        ViewModelFactory.getInstance(requireContext())
+//    }
+
+    private lateinit var firebaseAuth: FirebaseAuth
+    private var _binding: FragmentBottomSheetLoginBinding? = null
+    private val binding get() = _binding!!
+
+    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
+        val dialog = super.onCreateDialog(savedInstanceState)
+        dialog.setCanceledOnTouchOutside(false)
+        return dialog
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentBottomSheetLoginBinding.inflate(inflater, container, false)
+        firebaseAuth = FirebaseAuth.getInstance()
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Tambahkan aksi untuk btnBack
+        binding.btnBack.setOnClickListener {
+            dismiss() // Tutup BottomSheet
+        }
+
+        setupAction()
+        setupViewModel()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+    private fun setupAction(){
+        with(binding){
+            bindProgressButton(btnSignIn)
+
+            btnForgotPassword.setOnClickListener{
+                startActivity(Intent(requireContext(), ForgotPasswordActivity::class.java))
+            }
+
+            inputEmail.doOnTextChanged { checkEmailValidation(it) }
+
+            inputPassword.doOnTextChanged { checkPasswordValidation(it) }
+
+            btnSignIn.setOnClickListener {
+                val email = inputEmail.text.toString()
+                val password = inputPassword.text.toString()
+                val emailValidation = checkEmailValidation(email)
+                val passwordValidation = checkPasswordValidation(password)
+
+                if (emailValidation && passwordValidation){
+//                    viewModel.signIn(LoginRequest(inputEmail.text.toString(), inputPassword.text.toString()))
+
+                }
+            }
+        }
+    }
+
+    private fun setupViewModel() {
+//        viewModel.isLoading.observe(viewLifecycleOwner) {
+//            with(binding) {
+//                if (it) {
+//                    btnSignIn.showProgress()
+//                    inputEmail.isEnabled = false
+//                    inputPassword.isEnabled = false
+//                } else {
+//                    btnSignIn.hideProgress(getString(R.string.signin))
+//                    inputEmail.isEnabled = true
+//                    inputPassword.isEnabled = true
+//                }
+//            }
+//        }
+
+//        viewModel.signInResult.observe(viewLifecycleOwner) {
+//            if (it.status) {
+//                startActivity(Intent(requireContext(), FavoriteActivity::class.java))
+//                dismiss() // Tutup BottomSheet setelah login berhasil
+//            } else {
+//                Snackbar.make(
+//                    binding.root, // Gunakan root dari binding
+//                    it.msg ?: "There seems to be an error!",
+//                    Snackbar.LENGTH_LONG
+//                ).show()
+//            }
+//        }
+    }
+
+
+    private fun checkEmailValidation(email: String? = null) : Boolean {
+        val inputEmail = binding.inputEmail.text.toString()
+        val checkEmail = if (email.isNullOrBlank()) emailPattern(inputEmail) else emailPattern(email)
+        when(checkEmail.status){
+            false -> showMessageInput(1, checkEmail.message.toString())
+            true -> unshowMessageInput(1)
+        }
+        return checkEmail.status
+    }
+
+    private fun checkPasswordValidation(password: String? = null) : Boolean {
+        val inputPassword = binding.inputPassword.text.toString()
+        val checkPassword = if (password.isNullOrBlank()) passwordPattern(inputPassword) else passwordPattern(password)
+        when(checkPassword.status){
+            false -> showMessageInput(2, checkPassword.message.toString())
+            true -> unshowMessageInput(2)
+        }
+        return checkPassword.status
+    }
+
+    private fun showMessageInput(type: Int, message: String){
+        if (type == 1){
+            binding.messageErrorEmail.text = message
+            binding.messageErrorEmail.visibility = View.VISIBLE
+        } else {
+            binding.messageErrorPassword.text = message
+            binding.messageErrorPassword.visibility = View.VISIBLE
+        }
+    }
+
+    private fun unshowMessageInput(type: Int){
+        when(type){
+            1 -> binding.messageErrorEmail.visibility = View.GONE
+            2 -> binding.messageErrorPassword.visibility = View.GONE
+        }
+    }
+}

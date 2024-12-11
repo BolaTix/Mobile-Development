@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_receipt"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.HomeFragment">
+
+    <include
+        android:id="@+id/loading"
+        layout="@layout/item_loading" />
+
+    <LinearLayout
+        android:id="@+id/layoutMatchResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="15dp" >
+
+        <TextView
+            style="@style/Body2MediumText.Bold.NeutralDark40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/space_x2"
+            android:text="Hasil Pertandingan Terbaru" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMatchResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutRecFavorite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp" >
+
+        <TextView
+            style="@style/Body2MediumText.Bold.NeutralDark40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/space_x2"
+            android:text="Rekomendasi Favorit" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFavoriteRecomendation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutRecHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp" >
+
+        <TextView
+            style="@style/Body2MediumText.Bold.NeutralDark40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/space_x2"
+            android:text="Rekomendasi Pembelian" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBuyRecomendation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

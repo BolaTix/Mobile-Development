@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="darkGrey">#333333</color>
+    <color name="error">#ef4444</color>
+    <color name="colorButtonBlue">#ff1078ca</color>
+    <color name="colorMenuBottomNavigation">#ff00529c</color>
+    <color name="colorTextBlue1">#ff00529c</color>
+    <color name="black3">#ff333333</color>
+    <color name="color_grey_888888">#ff888888</color>
+    <color name="color_CFCFCF">#ffcfcfcf</color>
+    <color name="colorButtonGrey">#ffeef2f6</color>
+    <color name="whiteColor">#ffffffff</color>
+    <color name="toolbar_blue">#ff1f8fe5</color>
+    <color name="color_bg_bottomsheet">#ffeef2f6</color>
+    <color name="colorAccent">#ff202020</color>
+    <color name="colorPrimary">#ff1f8fe5</color>
+    <color name="colorPrimaryDark">#ff1f8fe5</color>
+    <color name="neutral_baseWhite">#ffffffff</color>
+    <color name="accent3Color">#ffeef2f6</color>
+    <color name="neutral_dark30">#ff3d3d3d</color>
+    <color name="neutral_dark40">#ff292929</color>
+    <color name="error80">#ffe84040</color>
+    <color name="neutralLight20">#ffeaebeb</color>
+    <color name="background_receipt">#ffdfe7ee</color>
+    <color name="primary_blue80">#ff1078ca</color>
+    <color name="neutral_baseBlack">#ff000000</color>
+    <color name="dotcolor">#ffd9e7e8</color>
+    <color name="black20">#ff202020</color>
+    <color name="neutral_light20">#ffeaebeb</color>
+    <color name="primary_blue10">#ffddeffc</color>
+    <color name="neutral_light30">#ffd3d4d4</color>
+    <color name="neutral_light40">#ffb5b6b6</color>
+    <color name="neutral_light80">#ff777777</color>
+
+</resources>

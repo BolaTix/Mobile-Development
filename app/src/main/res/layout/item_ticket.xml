@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="3dp"
+    android:layout_marginVertical="4dp"
+    app:cardBackgroundColor="#16161A"
+    app:cardElevation="1.5dp"
+    app:cardCornerRadius="5dp"
+    app:strokeColor="@color/neutral_light40"
+    app:strokeWidth=".5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/backgroundImage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_stadion"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:id="@+id/contentLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:orientation="vertical"
+                android:paddingVertical="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
+
+                    <ImageView
+                        android:id="@+id/ivHomeTeam"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_home"
+                        tools:ignore="ContentDescription" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/righteous"
+                            android:text="V"
+                            android:textColor="@color/error"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/righteous"
+                            android:text="S"
+                            android:textColor="@color/colorButtonBlue"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivAwayTeam"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_home"
+                        tools:ignore="ContentDescription" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_ticket_container"
+            android:orientation="vertical"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:id="@+id/tvTitleTicket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TITLE TICKET"
+                android:textColor="@color/colorButtonBlue"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_time"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/righteous"
+                    android:text="Time"
+                    android:textColor="@color/black"
+                    android:textSize="13.5sp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_location"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/tvStadion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/righteous"
+                    android:text="Location"
+                    android:textColor="@color/black"
+                    android:textSize="13.5sp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnBuyTicket"
+                style="@style/StyleButton1"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/rounded_button_blue"
+                android:fontFamily="@font/righteous"
+                android:text="BELI SEKARANG"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

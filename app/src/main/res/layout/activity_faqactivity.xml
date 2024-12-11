@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.activities.FAQActivity">
+
+    <include
+        android:id="@+id/topBarFAQ"
+        layout="@layout/item_topbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="@string/title_faq"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/desc_faq1"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:lineSpacingExtra="4dp"
+            android:paddingBottom="12dp"
+            tools:ignore="VisualLintLongText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFAQ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_faq" />
+
+    </LinearLayout>
+
+</LinearLayout>

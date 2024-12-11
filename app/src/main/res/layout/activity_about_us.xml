@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.activities.AboutUsActivity">
+
+    <include
+        android:id="@+id/topBarAbout"
+        layout="@layout/item_topbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/descAbout"
+                android:paddingTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/deskripsi_aboutus"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:lineSpacingExtra="4dp"
+                android:paddingBottom="12dp"
+                tools:ignore="VisualLintLongText" />
+
+            <!-- Misi Bolatix -->
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/missionAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/misi_bolatix"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:paddingBottom="8dp" />
+
+            <TextView
+                android:id="@+id/missionDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/deskripsi_aboutus2"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:lineSpacingExtra="4dp"
+                android:paddingBottom="12dp"
+                tools:ignore="VisualLintLongText" />
+
+            <!-- Fitur Utama Bolatix -->
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/featuresAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fitur_utama_bolatix"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:paddingBottom="8dp" />
+
+            <TextView
+                android:id="@+id/featuresDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/deskripsi_aboutus_fitur"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:lineSpacingExtra="4dp"
+                android:paddingBottom="12dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

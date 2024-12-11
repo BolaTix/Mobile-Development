@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="fill_parent"
+    android:layout_height="?actionBarSize"
+    android:background="@color/toolbar_blue"
+    android:elevation="@dimen/_4sdp"
+    android:outlineProvider="bounds"
+    android:textAlignment="center"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <TextView
+        android:id="@+id/textTitle"
+        style="@style/SubTitleText.Bold.White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textAlignment="center" />
+</androidx.appcompat.widget.Toolbar>

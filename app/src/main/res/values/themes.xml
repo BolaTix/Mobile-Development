@@ -1,0 +1,184 @@
+<resources>
+    <style name="Base.Theme.BOLATIX" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/black</item>
+    </style>
+    <style name="Theme.BOLATIX" parent="Base.Theme.BOLATIX" />
+    <style name="SplashScreen" parent="AppThemeBlueBar2">
+        <item name="android:windowBackground">@color/primary_blue80</item>
+        <item name="android:navigationBarColor">@color/primary_blue80</item>
+    </style>
+<!--    <style name="match_sched">-->
+<!--        <item name="android:textSize">25sp</item>-->
+<!--        <item name="android:textColor">#FFFFFF</item>-->
+<!--    </style>-->
+    <style name="CircleImage" parent="ShapeAppearance.MaterialComponents">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+<!--    <style name="TableFieldStyle">-->
+<!--        <item name="android:layout_width">match_parent</item>-->
+<!--        <item name="android:layout_height">wrap_content</item>-->
+<!--        <item name="android:padding">8dp</item>-->
+<!--        <item name="android:textColor">@color/black</item>-->
+<!--        <item name="android:gravity">center</item>-->
+<!--    </style>-->
+    <style name="CustomTextInputLayout">
+        <item name="boxStrokeColor">@color/neutral_light80</item>
+        <item name="strokeColor">@color/neutral_light80</item>
+        <item name="startIconTint">@color/black</item>
+        <item name="endIconTint">@color/black</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="hintTextColor">@color/black</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+    </style>
+    <style name="TextInputLayoutRangeRevamp" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="android:textColorHint">@color/neutral_light80</item>
+        <item name="hintTextColor">@color/neutral_light80</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/space_x1</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/space_x1</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/space_x1</item>
+        <item name="boxCornerRadiusTopStart">@dimen/space_x1</item>
+        <item name="boxStrokeColor">@color/neutral_light80</item>
+        <item name="boxStrokeWidth">1.0dip</item>
+        <item name="boxStrokeWidthFocused">1.0dip</item>
+    </style>
+<!--    <style name="Body3SmallText.Regular.NeutralBaseBlack" parent="@style/Body3SmallText.Regular">-->
+<!--        <item name="android:textColor">@color/neutral_baseBlack</item>-->
+<!--    </style>-->
+<!--    <style name="TextInputLayoutRevamp" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">-->
+<!--        <item name="android:textColorHint">@color/neutral_light30</item>-->
+<!--        <item name="boxCornerRadiusBottomEnd">@dimen/space_x1</item>-->
+<!--        <item name="boxCornerRadiusBottomStart">@dimen/space_x1</item>-->
+<!--        <item name="boxCornerRadiusTopEnd">@dimen/space_x1</item>-->
+<!--        <item name="boxCornerRadiusTopStart">@dimen/space_x1</item>-->
+<!--        <item name="boxStrokeColor">@color/selector_text_input_layout_box</item>-->
+<!--        <item name="boxStrokeWidth">1dp</item>-->
+<!--        <item name="boxStrokeWidthFocused">1dp</item>-->
+<!--    </style>-->
+<!--    <style name="Body3SmallText.Regular.NeutralDark40" parent="@style/Body3SmallText.Regular">-->
+<!--        <item name="android:textColor">@color/neutral_dark40</item>-->
+<!--    </style>-->
+    <style name="Body3SmallText.Regular" parent="@style/Body3SmallText">
+        <item name="fontFamily">@font/digi_regular</item>
+    </style>
+<!--    <style name="CustomTextInputLayout2">-->
+<!--        <item name="boxStrokeColor">@color/color_text_input_stroke_dark</item>-->
+<!--        <item name="strokeColor">@color/black</item>-->
+<!--        <item name="boxStrokeWidth">2dp</item>-->
+<!--        <item name="boxCornerRadiusTopStart">8dp</item>-->
+<!--        <item name="boxCornerRadiusTopEnd">8dp</item>-->
+<!--        <item name="boxCornerRadiusBottomStart">8dp</item>-->
+<!--        <item name="boxCornerRadiusBottomEnd">8dp</item>-->
+<!--        <item name="hintTextColor">@color/black</item>-->
+<!--    </style>-->
+    <style name="CustomInputStyle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+<!--    <style name="CustomInputStyle2">-->
+<!--        <item name="android:textSize">15sp</item>-->
+<!--        <item name="android:textColor">@color/black</item>-->
+<!--    </style>-->
+    <style name="ErrorTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:textColor">@color/error</item>
+    </style>
+    <style name="StyleButton1" parent="@style/Body2MediumText.Bold">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/btn_rounded_1</item>
+    </style>
+    <style name="BaseAppTheme.Text" parent="@style/TextAppearance.AppCompat" />
+    <style name="SubTitleText" parent="@style/BaseAppTheme.Text">
+        <item name="android:textSize">@dimen/subtitle_text</item>
+    </style>
+    <style name="SubTitleText.Bold" parent="@style/SubTitleText">
+        <item name="android:fontFamily">@font/av_bold</item>
+    </style>
+    <style name="SubTitleText.Bold.White" parent="@style/SubTitleText.Bold">
+        <item name="android:textColor">@color/whiteColor</item>
+    </style>
+    <style name="AppThemeBlueBar" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:fontFamily">@font/av_medium</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
+    <style name="AppThemeBlueBar2" parent="@style/Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:fontFamily">@font/av_medium</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/primary_blue80</item>
+        <item name="colorPrimaryDark">@color/primary_blue80</item>
+    </style>
+    <style name="CustomTabTextStyle" parent="TextAppearance.Design.Tab">
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/av_medium</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="Body2MediumText" parent="@style/BaseAppTheme.Text">
+        <item name="android:textSize">@dimen/text_body2</item>
+    </style>
+    <style name="Body2MediumText.Bold" parent="@style/Body2MediumText">
+        <item name="fontFamily">@font/digi_bold</item>
+    </style>
+<!--    <style name="Body2MediumText.Bold.NeutralBaseWhite" parent="@style/Body2MediumText.Bold">-->
+<!--        <item name="android:textColor">@color/neutral_baseWhite</item>-->
+<!--    </style>-->
+    <style name="HeaderFieldTable">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">8dp</item>
+    </style>
+    <style name="ContentFieldTable" parent="HeaderFieldTable">
+        <item name="android:background">#CCCCCC</item>
+    </style>
+    <style name="Body2MediumText.Bold.NeutralDark40" parent="@style/Body2MediumText.Bold">
+        <item name="android:textColor">@color/neutral_dark40</item>
+    </style>
+    <style name="Body3SmallText.Medium.Error" parent="@style/Body3SmallText.Medium">
+        <item name="android:textColor">@color/error80</item>
+    </style>
+    <style name="Body3SmallText.Medium" parent="@style/Body3SmallText">
+        <item name="fontFamily">@font/digi_medium</item>
+    </style>
+    <style name="Body3SmallText" parent="@style/BaseAppTheme.Text">
+        <item name="android:textSize">@dimen/text_body3</item>
+    </style>
+    <style name="Body3SmallText.Medium.NeutralDark40" parent="@style/Body3SmallText.Medium">
+        <item name="android:textColor">@color/neutral_dark40</item>
+    </style>
+    <style name="AppTheme.NoActionBar" parent="@style/AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:fontFamily">@font/av_medium</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="snackbarStyle">@style/CustomSnackbar</item>
+    </style>
+    <style name="CustomSnackbar" parent="@style/Widget.Design.Snackbar">
+        <item name="android:textColor">@color/neutral_light20</item>
+        <item name="android:background">@color/primary_blue10</item>
+    </style>
+<!--    <style name="ButtonPrimaryRevamp.OutlineTransparent" parent="@style/Widget.AppCompat.Button.Borderless">-->
+<!--        <item name="android:textSize">@dimen/body_medium_text</item>-->
+<!--        <item name="android:textColor">@color/primary_blue80</item>-->
+<!--        <item name="android:textAllCaps">false</item>-->
+<!--        <item name="android:fontFamily">@font/digi_bold</item>-->
+<!--    </style>-->
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!--    <com.barryzeha.dotsloadingview.components.DotsLoadingComponent-->
+<!--        android:id="@+id/myDotLoading"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:animationDuration="1000"-->
+<!--        android:layout_gravity="center"-->
+<!--        app:dotColor="@color/black"-->
+<!--        app:dotMargin="4"-->
+<!--        app:dotSize="20"-->
+<!--        app:dotSrc="@drawable/ic_football_loading"-->
+<!--        app:dotType="resource"-->
+<!--        app:numberOfDots="3"-->
+<!--        app:startAnimation="true" />-->
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressTint="@color/black"
+        android:indeterminateTint="@color/colorButtonBlue"
+        android:layout_gravity="center"/>
+</FrameLayout>

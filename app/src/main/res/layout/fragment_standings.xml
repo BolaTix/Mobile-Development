@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".ui.fragments.StandingsFragment">
+
+    <include
+        android:id="@+id/loading"
+        layout="@layout/item_loading" />
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/tHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/ContentFieldTable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TIM" />
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:background="#CCCCCC"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="MA" />
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:background="#CCCCCC"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="P" />
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:background="#CCCCCC"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="M" />
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:background="#CCCCCC"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="S" />
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:background="#CCCCCC"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="K" />
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:background="#CCCCCC"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="G" />
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:background="#CCCCCC"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="S" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvStandings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

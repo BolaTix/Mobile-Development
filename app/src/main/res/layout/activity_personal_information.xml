@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.activities.PersonalInformationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#22262A"
+        android:elevation="1dp">
+
+        <include
+            android:id="@+id/topBarPersonalInformation"
+            layout="@layout/item_topbar" />
+    </LinearLayout>
+
+    <include
+        android:visibility="gone"
+        android:id="@+id/loading"
+        layout="@layout/item_loading" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_half"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:scaleType="centerCrop"
+                android:src="@null"
+                app:shapeAppearanceOverlay="@style/CircleImage"
+                app:strokeColor="@color/neutral_dark40"
+                app:strokeWidth="1dp"/>
+
+            <ImageView
+                android:id="@+id/btnChangePicture"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_ic_camera"
+                android:elevation="8dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_camera"
+                tools:ignore="ContentDescription" />
+        </FrameLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/space_x1_half"
+            android:layout_marginVertical="@dimen/space_x1"
+            android:background="@color/white"
+            android:elevation="0.0dip"
+            app:cardCornerRadius="@dimen/space_x1_half"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/btnChangeName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:importantForAccessibility="no"
+                        android:padding="@dimen/space_x1_half"
+                        android:src="@drawable/ic_personal" />
+
+                    <View
+                        android:layout_width="@dimen/size_1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/neutralLight20" />
+
+                    <TextView
+                        android:id="@+id/tvShowName"
+                        style="@style/Body3SmallText.Medium.NeutralDark40"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="@dimen/space_x2"
+                        android:paddingTop="@dimen/space_x1_half"
+                        android:paddingBottom="@dimen/space_x1_half"
+                        tools:ignore="RtlSymmetry,TextSizeCheck" />
+
+                    <include layout="@layout/item_right_list" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_1dp"
+                    android:background="@color/neutralLight20" />
+
+                <LinearLayout
+                    android:id="@+id/btnChangeEmail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:importantForAccessibility="no"
+                        android:padding="@dimen/space_x1_half"
+                        android:src="@drawable/ic_email" />
+
+                    <View
+                        android:layout_width="@dimen/size_1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/neutralLight20" />
+
+                    <TextView
+                        android:id="@+id/tvShowEmail"
+                        style="@style/Body3SmallText.Medium.NeutralDark40"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="@dimen/space_x2"
+                        android:paddingTop="@dimen/space_x1_half"
+                        android:paddingBottom="@dimen/space_x1_half"
+                        tools:ignore="RtlSymmetry,TextSizeCheck" />
+
+                    <include layout="@layout/item_right_list" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_1dp"
+                    android:background="@color/neutralLight20" />
+
+                <LinearLayout
+                    android:id="@+id/btnChangePassword"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:importantForAccessibility="no"
+                        android:padding="@dimen/space_x1_half"
+                        android:src="@drawable/ic_lock" />
+
+                    <View
+                        android:layout_width="@dimen/size_1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/neutralLight20" />
+
+                    <TextView
+                        android:id="@+id/tvShowPassword"
+                        style="@style/Body3SmallText.Medium.NeutralDark40"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="@dimen/space_x2"
+                        android:paddingTop="@dimen/space_x1_half"
+                        android:paddingBottom="@dimen/space_x1_half"
+                        android:text="**************"
+                        tools:ignore="HardcodedText,RtlSymmetry,TextSizeCheck" />
+
+                    <include layout="@layout/item_right_list" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_1dp"
+                    android:background="@color/neutralLight20" />
+
+                <LinearLayout
+                    android:id="@+id/btnChangeNumber"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:importantForAccessibility="no"
+                        android:padding="@dimen/space_x1_half"
+                        android:src="@drawable/ic_phone" />
+
+                    <View
+                        android:layout_width="@dimen/size_1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/neutralLight20" />
+
+                    <TextView
+                        android:id="@+id/tvShowNumber"
+                        style="@style/Body3SmallText.Medium.NeutralDark40"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="@dimen/space_x2"
+                        android:paddingTop="@dimen/space_x1_half"
+                        android:paddingBottom="@dimen/space_x1_half"
+                        tools:ignore="RtlSymmetry,TextSizeCheck" />
+
+                    <include layout="@layout/item_right_list" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_1dp"
+                    android:background="@color/neutralLight20" />
+
+                <LinearLayout
+                    android:id="@+id/btnChangeBirthday"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:importantForAccessibility="no"
+                        android:padding="@dimen/space_x1_half"
+                        android:src="@drawable/ic_birtday" />
+
+                    <View
+                        android:layout_width="@dimen/size_1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/neutralLight20" />
+
+                    <TextView
+                        android:id="@+id/tvShowBirthday"
+                        style="@style/Body3SmallText.Medium.NeutralDark40"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="@dimen/space_x2"
+                        android:paddingTop="@dimen/space_x1_half"
+                        android:paddingBottom="@dimen/space_x1_half"
+                        tools:ignore="RtlSymmetry,TextSizeCheck" />
+
+                    <include layout="@layout/item_right_list" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_1dp"
+                    android:background="@color/neutralLight20" />
+
+                <LinearLayout
+                    android:id="@+id/btnChangeGender"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:importantForAccessibility="no"
+                        android:padding="@dimen/space_x1_half"
+                        android:src="@drawable/ic_gender" />
+
+                    <View
+                        android:layout_width="@dimen/size_1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/neutralLight20" />
+
+                    <TextView
+                        android:id="@+id/tvShowGender"
+                        style="@style/Body3SmallText.Medium.NeutralDark40"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="@dimen/space_x2"
+                        android:paddingTop="@dimen/space_x1_half"
+                        android:paddingBottom="@dimen/space_x1_half"
+                        tools:ignore="RtlSymmetry,TextSizeCheck" />
+
+                    <include layout="@layout/item_right_list" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lInfo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/rounded_line_blue"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="10.0dip"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/test_info_outline" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/av_bold"
+                android:text="Informasi"
+                android:textColor="@color/colorTextBlue1"
+                android:textSize="14.0dip"
+                tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="7.0dip"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginBottom="12.0dip"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/av_medium"
+                    android:justificationMode="inter_word"
+                    android:text="@string/tx_information_profile"
+                    android:textColor="@color/black3"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText,TextSizeCheck,UnusedAttribute" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

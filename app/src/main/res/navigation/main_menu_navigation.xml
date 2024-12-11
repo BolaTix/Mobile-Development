@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navHome">
+
+    <fragment
+        android:id="@+id/navHome"
+        android:name="com.example.bolatix.ui.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navTicket"
+        android:name="com.example.bolatix.ui.fragments.TicketFragment"
+        android:label="Ticket"
+        tools:layout="@layout/fragment_ticket" />
+
+    <fragment
+        android:id="@+id/navStandings"
+        android:name="com.example.bolatix.ui.fragments.StandingsFragment"
+        android:label="Standings"
+        tools:layout="@layout/fragment_standings" />
+
+    <fragment
+        android:id="@+id/navProfile"
+        android:name="com.example.bolatix.ui.fragments.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
