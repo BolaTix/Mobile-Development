@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <LinearLayout
+        style="@style/ContentFieldTable"
+        android:layout_width="0dp"
+        android:background="@android:color/transparent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_gravity="center"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_home"
+            android:text="Persebaya Surabaya" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvMain"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="12" />
+
+    <TextView
+        android:id="@+id/tvPoin"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="27" />
+
+    <TextView
+        android:id="@+id/tvMenang"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="12" />
+
+    <TextView
+        android:id="@+id/tvSeri"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="27" />
+
+    <TextView
+        android:id="@+id/tvKalah"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="12" />
+
+    <TextView
+        android:id="@+id/tvGoal"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="27" />
+
+    <TextView
+        android:id="@+id/tvSelisihGoal"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="12" />
+</TableRow>
