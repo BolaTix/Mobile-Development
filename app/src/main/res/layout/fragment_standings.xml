@@ -16,24 +16,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <LinearLayout
             android:id="@+id/tHead"
             android:layout_width="match_parent"
+            android:background="@drawable/bg_thead"
             android:layout_height="wrap_content"
+            android:clipChildren="false"
             android:orientation="horizontal">
 
             <TextView
-                style="@style/ContentFieldTable"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:layout_weight="1"
+                android:tooltipText="Nama Tim"
                 android:text="TIM" />
 
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:background="#CCCCCC"
                 android:gravity="center"
+                android:tooltipText="Main"
                 android:padding="8dp"
                 android:text="MA" />
 
@@ -42,6 +46,7 @@
                 android:layout_height="wrap_content"
                 android:background="#CCCCCC"
                 android:gravity="center"
+                android:tooltipText="Poin"
                 android:padding="8dp"
                 android:text="P" />
 
@@ -50,6 +55,7 @@
                 android:layout_height="wrap_content"
                 android:background="#CCCCCC"
                 android:gravity="center"
+                android:tooltipText="Menang"
                 android:padding="8dp"
                 android:text="M" />
 
@@ -58,6 +64,7 @@
                 android:layout_height="wrap_content"
                 android:background="#CCCCCC"
                 android:gravity="center"
+                android:tooltipText="Seri"
                 android:padding="8dp"
                 android:text="S" />
 
@@ -66,6 +73,7 @@
                 android:layout_height="wrap_content"
                 android:background="#CCCCCC"
                 android:gravity="center"
+                android:tooltipText="Kalah"
                 android:padding="8dp"
                 android:text="K" />
 
@@ -74,14 +82,15 @@
                 android:layout_height="wrap_content"
                 android:background="#CCCCCC"
                 android:gravity="center"
+                android:tooltipText="Goal"
                 android:padding="8dp"
                 android:text="G" />
 
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:background="#CCCCCC"
                 android:gravity="center"
+                android:tooltipText="Selisih Goal"
                 android:padding="8dp"
                 android:text="S" />
         </LinearLayout>

@@ -64,7 +64,7 @@ class SignUpActivity : AppCompatActivity() {
                 val confirmPasswordValidation = checkConfirmPasswordValidation(confirmPassword)
 
                 if (name.isBlank()) {
-                    showMessageInput(4, "Name Cannot be Empty")
+                    showMessageInput(4, "Nama wajib diisi!")
                     return@setOnClickListener
                 }
 
@@ -102,7 +102,7 @@ class SignUpActivity : AppCompatActivity() {
 
     private fun checkNameValidation(name: String) {
         if (name.isBlank()) {
-            showMessageInput(4, "Name Cannot be Empty")
+            showMessageInput(4, "Nama wajib diisi!")
         } else {
             unshowMessageInput(4)
         }
@@ -135,10 +135,10 @@ class SignUpActivity : AppCompatActivity() {
     private fun checkConfirmPasswordValidation(confirmPassword: String): Boolean {
         val password = binding.etPassword.text.toString()
         if (confirmPassword.isBlank()) {
-            showMessageInput(3, "Confirm Password Cannot be Empty")
+            showMessageInput(3, "Konfimasi password wajib diisi!")
             return false
         } else if (confirmPassword != password) {
-            showMessageInput(3, "Password doesn't match")
+            showMessageInput(3, "Password tidak cocok")
             return false
         } else {
             unshowMessageInput(3)

@@ -20,8 +20,8 @@
         layout="@layout/item_loading" />
 
     <ScrollView
-        android:id="@+id/content"
         android:visibility="gone"
+        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -42,19 +42,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
                 android:elevation="0.5dp"
-                app:cardCornerRadius="@dimen/space_x1_half">
+                app:cardCornerRadius="8dp">
 
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <!-- ImageView sebagai background -->
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:importantForAccessibility="no"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/bg_stadion" />
+                        android:src="@drawable/night_stadion" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -75,8 +74,7 @@
                                 android:id="@+id/tvDate"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/av_demi"
-                                android:text="25 Agustus 2024 | 15:00 WIB"
+                                android:fontFamily="@font/av_medium"
                                 android:textColor="@color/white"
                                 android:textSize="18sp" />
                         </LinearLayout>
@@ -100,15 +98,14 @@
                                     android:layout_height="72dp"
                                     android:importantForAccessibility="no"
                                     android:scaleType="fitCenter"
-                                    android:src="@drawable/ic_home" />
+                                    android:src="@null" />
 
                                 <TextView
                                     android:id="@+id/homeName"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
-                                    android:fontFamily="@font/av_bold"
-                                    android:text="Munchen"
+                                    android:fontFamily="@font/av_medium"
                                     android:textColor="@color/white"
                                     android:textSize="12sp"
                                     android:textStyle="bold" />
@@ -133,15 +130,14 @@
                                     android:layout_height="72dp"
                                     android:importantForAccessibility="no"
                                     android:scaleType="fitCenter"
-                                    android:src="@drawable/ic_home" />
+                                    android:src="@null"  />
 
                                 <TextView
                                     android:id="@+id/awayName"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
-                                    android:fontFamily="@font/av_bold"
-                                    android:text="Munchen"
+                                    android:fontFamily="@font/av_medium"
                                     android:textColor="@color/white"
                                     android:textSize="12sp"
                                     android:textStyle="bold" />
@@ -160,7 +156,6 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/av_demi"
-                                android:text="Stadion Magelang"
                                 android:textColor="@color/white"
                                 android:textSize="18sp" />
                         </LinearLayout>
@@ -177,7 +172,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
-                android:fontFamily="@font/av_demi"
+                android:fontFamily="@font/av_medium"
                 android:gravity="center"
                 android:text="Ticket Tersedia"
                 android:textColor="@color/black"

@@ -24,6 +24,7 @@
         android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:tooltipText="Main"
         android:padding="8dp"
         android:text="12" />
 
@@ -32,12 +33,14 @@
         android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:tooltipText="Poin"
         android:padding="8dp"
         android:text="27" />
 
     <TextView
         android:id="@+id/tvMenang"
         android:layout_width="40dp"
+        android:tooltipText="Menang"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="8dp"
@@ -48,6 +51,7 @@
         android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:tooltipText="Seri"
         android:padding="8dp"
         android:text="27" />
 
@@ -55,6 +59,7 @@
         android:id="@+id/tvKalah"
         android:layout_width="40dp"
         android:layout_height="wrap_content"
+        android:tooltipText="Kalah"
         android:gravity="center"
         android:padding="8dp"
         android:text="12" />
@@ -64,6 +69,7 @@
         android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:tooltipText="Goal"
         android:padding="8dp"
         android:text="27" />
 
@@ -72,6 +78,7 @@
         android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:tooltipText="Selisih Goal"
         android:padding="8dp"
         android:text="12" />
 </TableRow>

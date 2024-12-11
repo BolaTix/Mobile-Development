@@ -64,7 +64,7 @@
                     android:textSize="12.5sp"
                     android:textColor="@color/black"
                     android:textAllCaps="true"
-                    android:fontFamily="@font/av_bold"
+                    android:fontFamily="@font/av_medium"
                     android:text="Munchen"
                     tools:ignore="HardcodedText" />
             </LinearLayout>
@@ -99,7 +99,7 @@
                     android:textAllCaps="true"
                     android:textStyle="bold"
                     android:textSize="12.5sp"
-                    android:fontFamily="@font/av_bold"
+                    android:fontFamily="@font/av_medium"
                     android:text="Munchen"
                     tools:ignore="HardcodedText" />
             </LinearLayout>

@@ -64,7 +64,7 @@
                     android:textSize="11sp"
                     android:textColor="@color/black"
                     android:textAllCaps="true"
-                    android:fontFamily="@font/av_bold"
+                    android:fontFamily="@font/av_medium"
                     android:text="Munchen" />
             </LinearLayout>
 
@@ -108,7 +108,7 @@
                     android:layout_marginTop="10dp"
                     android:textStyle="bold"
                     android:textSize="11sp"
-                    android:fontFamily="@font/av_bold"
+                    android:fontFamily="@font/av_medium"
                     android:text="Munchen" />
             </LinearLayout>
         </LinearLayout>

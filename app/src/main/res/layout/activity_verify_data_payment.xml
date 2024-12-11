@@ -70,6 +70,7 @@
                 android:layout_marginTop="10dp"
                 app:endIconMode="clear_text"
                 app:startIconTint="@color/colorButtonBlue"
+                app:endIconTint="@color/colorButtonBlue"
                 app:startIconDrawable="@drawable/ic_personal">
 
                 <com.example.bolatix.ui.components.CustomInput
@@ -99,6 +100,7 @@
                 android:layout_marginTop="10dp"
                 app:endIconMode="clear_text"
                 app:startIconTint="@color/colorButtonBlue"
+                app:endIconTint="@color/colorButtonBlue"
                 app:startIconDrawable="@drawable/ic_idcard">
 
                 <com.example.bolatix.ui.components.CustomInput
@@ -128,6 +130,7 @@
                 android:layout_marginTop="10dp"
                 app:endIconMode="clear_text"
                 app:startIconTint="@color/colorButtonBlue"
+                app:endIconTint="@color/colorButtonBlue"
                 app:startIconDrawable="@drawable/ic_email">
 
                 <com.example.bolatix.ui.components.CustomInput
@@ -157,6 +160,7 @@
                 android:layout_marginTop="10dp"
                 app:endIconMode="clear_text"
                 app:startIconTint="@color/colorButtonBlue"
+                app:endIconTint="@color/colorButtonBlue"
                 app:startIconDrawable="@drawable/ic_phone">
 
                 <com.example.bolatix.ui.components.CustomInput
