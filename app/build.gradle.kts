@@ -28,6 +28,7 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -59,7 +60,6 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.play.services.auth)
     implementation(libs.firebase.firestore)
-    implementation(libs.firebase.storage)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -78,10 +78,8 @@ dependencies {
     implementation(libs.uikit)
     implementation(libs.ucrop)
     implementation(libs.core)
-    implementation(libs.itext7.core)
     implementation(libs.koin.android)
     implementation(libs.koin.core)
     implementation(libs.kotlin.reflect)
-    implementation(libs.dotsloadingview)
     implementation(libs.markwon.core)
 }

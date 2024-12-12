@@ -139,7 +139,7 @@ fun filterUpcomingMatches(matches: List<DataALlMatch>): List<DataALlMatch> {
             val formattedDate =
                 "${year}-${dateParts[1].padStart(2, '0')}-${dateParts[0].padStart(2, '0')}"
             val dateTimeString = "${formattedDate}T${cleanedTime}"
-            val matchDate = java.text.SimpleDateFormat("yyyy-MM-dd'T'HH:mm").parse(dateTimeString)
+            val matchDate = SimpleDateFormat("yyyy-MM-dd'T'HH:mm").parse(dateTimeString)
             matchDate != null && matchDate.after(now)
         } catch (e: Exception) {
             println("Error parsing date for Match ID: ${match.idMatch} - ${match.tanggal}, Error: ${e.message}")
@@ -160,7 +160,7 @@ fun filterPastMatches(matches: List<DataALlMatch>): List<DataALlMatch> {
             val formattedDate =
                 "${year}-${dateParts[1].padStart(2, '0')}-${dateParts[0].padStart(2, '0')}"
             val dateTimeString = "${formattedDate}T${cleanedTime}"
-            val matchDate = java.text.SimpleDateFormat("yyyy-MM-dd'T'HH:mm", Locale.getDefault())
+            val matchDate = SimpleDateFormat("yyyy-MM-dd'T'HH:mm", Locale.getDefault())
                 .parse(dateTimeString)
             matchDate != null && matchDate.before(now)
         } catch (e: Exception) {
