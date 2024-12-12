@@ -95,7 +95,7 @@ This is project Mobile App for Bolatix.
 - [Backend](https://github.com/BolaTix/Cloud-Computing)
 - [Model Machine Learning](https://github.com/BolaTix/Machine-Learning) 
 
-# Installation
+## Installation
 
 - Clone the repository:
 
@@ -106,7 +106,7 @@ This is project Mobile App for Bolatix.
 - Install dependencies
 - Run the app
 
-# Libraries
+## Libraries
 
 - **Firebase** - Firebase is a platform that allows developers to build and deploy apps, with , authentication, database and more.
 - **Midtrans** - Midtrans is a payment gateway that allows developers to accept payments from users.
