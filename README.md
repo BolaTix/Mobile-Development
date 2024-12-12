@@ -90,8 +90,8 @@ This is project Mobile App for Bolatix.
 
 ## File you can download
 
-- [Mobile App](./file/BOLATIX.apk)
-- [Figma Desain](./file/FGMA-BOLATIX.fig)
+- [Mobile App](https://github.com/BolaTix/Mobile-Development/raw/refs/heads/main/file/FGMA-BOLATIX.fig)
+- [Figma Desain](https://github.com/BolaTix/Mobile-Development/raw/refs/heads/main/file/FGMA-BOLATIX.fig)
 - [Backend](https://github.com/BolaTix/Cloud-Computing)
 - [Model Machine Learning](https://github.com/BolaTix/Machine-Learning) 
 
